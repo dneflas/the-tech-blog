@@ -1,0 +1,46 @@
+:root {
+  --primary: #2f4454;
+  --secondary: #23151b;
+  --tertiary: #da7b93;
+  --light-dark: #376e6f;
+  --dark: #1c3334;
+  --info: #0dcaf0;
+  --border-radius: 0.3rem;
+}
+
+header {
+  border-bottom: #d3d3d3 solid;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--info);
+}
+
+a:hover {
+  color: var(--info);
+}
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+.box,
+.comment-box {
+  border: #d3d3d3;
+  border-style: solid;
+  border-radius: var(--border-radius);
+  background-color: #f5f5f5;
+}
+
+.box:hover {
+  background-color: #d3d3d3;
+}

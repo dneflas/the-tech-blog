@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <article>
+      <a href='/dashboard'>Back to dashboard</a>
+      <h2 class="col">Edit Post</h2>
+      <form class='edit-post-form'>
+        <div>
+          <input name='post-title' type='text' value='{{post.title}}' class="form-control mb-3"/>
+          <textarea name="post-content" id="post-content" rows="10" class="form-control mb-3">{{post.post_content}}</textarea>
+        </div>
+        <div>
+          by you on
+          {{format_date post.created_at}}
+          |
+          <a href='/posts/{{post.id}}'>{{post.comments.length}}
+            {{format_plural 'comment' post.comments.length}}</a>
+        </div>
+        <div class="my-2">
+          <button type='submit' class='btn btn-info text-white'>Save post</button>
+          <button type='button' class='delete-post-btn btn btn-info text-white'>Delete Post</button>
+        </div>
+      </form>
+    </article>
+
+    <form class='comment-form'>
+      <div>
+        <textarea name='comment-body' rows="4" class="form-control mb-3"></textarea>
+      </div>
+      <div>
+        <button type='submit' class="btn btn-info text-white">Add comment</button>
+      </div>
+    </form>
+    {{>comments post.comments}}
+
+  </div>
+</div>
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comments.js"></script>
+
+
