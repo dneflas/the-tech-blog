@@ -11,10 +11,10 @@ if (process.env.JAWSDB_URL) {
     process.env.DB_USERNAME,
     process.env.DB_PASSWORD,
     {
-      host: "localhost",
+      host: "host.docker.internal",
       dialect: "mysql",
       port: 3306,
-    }
+    },
   );
 }
 
