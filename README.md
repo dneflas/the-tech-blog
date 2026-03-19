@@ -65,3 +65,86 @@ This project has been extended to simulate a production-ready environment:
 ## 📦 Installation
 
 Clone the repository and install dependencies:
+`npm install`
+
+---
+
+## 🐳 Run with Docker (Recommended)
+
+Build and start services:
+`docker compose up --build`
+
+Application will be available at:
+http://localhost:3002
+
+---
+
+## 🌱 Seed the Database
+
+`npm run seed`
+
+---
+
+## 🔍 Health Check
+
+Verify the application is running:
+http://localhost:3002/health
+
+Expected response:
+`OK`
+
+---
+
+## 🖥️ Usage
+
+![screenshot](./public/images/screenshot.png)
+
+- View blog posts and comments
+- Sign up / log in to create content
+- Create, edit, and delete posts
+- Add and remove comments
+- Sessions expire after 30 minutes of inactivity
+
+---
+
+## 🔄 CI/CD Pipeline
+
+The project includes an automated CI pipeline that:
+
+- Builds the application
+- Starts services using Docker Compose
+- Verifies application health via endpoint testing
+
+This ensures:
+
+- Reliable builds
+- Early detection of failures
+- Consistent deployments
+
+---
+
+## 🌐 Deployed Link
+
+https://agile-inlet-69846.herokuapp.com/
+
+---
+
+## 🧠 Key Learnings
+
+- Containerizing full-stack applications with Docker
+- Managing multi-service systems using Docker Compose
+- Debugging container networking and environment issues
+- Implementing CI/CD pipelines for automated testing and builds
+- Applying SRE principles like health checks and service readiness
+
+---
+
+## License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+---
+
+## Questions
+
+GitHub: https://github.com/dneflas
