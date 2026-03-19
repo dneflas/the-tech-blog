@@ -40,8 +40,11 @@ jobs:
       - name: Run services
         run: docker compose up -d
 
+      - name: Show running containers
+        run: docker ps -a
+
       - name: Show container logs
-        run: docker compose logs
+        run: docker compose logs --no-color
 
       - name: Wait for app
         run: |
