@@ -31,5 +31,13 @@ jobs:
       - name: Run services
         run: docker compose up -d
 
+      - name: Wait for app
+        run: |
+          for i in {1..10}; do
+            curl -f http://localhost:3002/health && break
+            echo "Waiting for app..."
+            sleep 5
+          done
+
       - name: Check app health
         run: curl http://localhost:3002/health
