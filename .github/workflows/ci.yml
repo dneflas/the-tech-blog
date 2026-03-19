@@ -29,7 +29,7 @@ jobs:
         run: docker build -t my-app .
 
       - name: Run services
-        run: docker-compose up -d
+        run: docker compose up -d
 
       - name: Check app health
         run: curl http://localhost:3002/health
