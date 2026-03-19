@@ -4,52 +4,64 @@
 
 ## Description
 
-This project is a full-stack application that allows users to read, write, edit blog posts, and leave comments. The application follows the MVC paradigm and is written in Javascript. It uses express to create a RESTful API for the controllers. MySQL along with sequelize ORM are used for the models. And Handlebars as a templating engine for the views. Express sessions and connect session sequelize packages are used to add authentication. Dotenv package used to store environment variables. Bcrypt package is used to hash passwords. Casual package is used to seed fake data.
+The Tech Blog is a full-stack web application that allows users to create, edit, and interact with blog posts and comments. The application follows the MVC architecture and is built with JavaScript, Express, MySQL, Sequelize ORM, and Handlebars.
 
-  <br>
+In addition to core full-stack functionality, this project has been enhanced with **Site Reliability Engineering (SRE) practices**, including containerization, multi-service orchestration, CI/CD automation, and health monitoring.
 
-## Table of Contents
+---
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Deployed Link](#deployed-link)
-- [License](#license)
-- [Questions](#questions)  
-  <br>
+## 🚀 SRE & DevOps Features
 
-## Installation
+This project has been extended to simulate a production-ready environment:
 
-Use the following command to download dependencies for the project:
+- **Containerization**
+  - Dockerized Node.js application for consistent environments
+  - Eliminates “works on my machine” issues
 
-```
-npm install
-```
+- **Multi-Service Architecture**
+  - Docker Compose used to run:
+    - Application service
+    - MySQL database service
+  - Internal container networking via service names
 
-Use the following command to seed the database:
+- **Environment Configuration**
+  - Environment variables managed via `.env`
+  - Secure handling using GitHub Secrets in CI
 
-```
-npm run seed
-```
+- **CI/CD Pipeline**
+  - Automated pipeline using GitHub Actions
+  - Runs on every push and pull request
+  - Steps include:
+    - Install dependencies
+    - Build Docker image
+    - Spin up services
+    - Run health checks
 
-  <br>
+- **Health Monitoring**
+  - `/health` endpoint implemented
+  - Used by CI to verify application readiness
 
-## Usage
+- **Resilience Concepts**
+  - Handles service startup dependencies (app vs database)
+  - Demonstrates real-world debugging of container networking and timing issues
 
-![screenshot](./public/images/screenshot.png)
-</br>
-The application allows you to view post and comments. Once signed in, the application allows you to create, edit and delete posts, as well as leave and delete comments. The session will timeout after 30 minutes of inactivity.
-<br>
+---
 
-## Deployed Link
+## 🧱 Tech Stack
 
-https://agile-inlet-69846.herokuapp.com/
-</br>
+- **Backend:** Node.js, Express
+- **Frontend:** Handlebars, HTML, CSS
+- **Database:** MySQL
+- **ORM:** Sequelize
+- **Authentication:** Express Sessions
+- **Other Tools:**
+  - bcrypt (password hashing)
+  - dotenv (environment variables)
+  - Docker & Docker Compose
+  - GitHub Actions (CI/CD)
 
-## License
+---
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).  
- </br>
+## 📦 Installation
 
-## Questions
-
-[GitHub](https://github.com/dneflas)
+Clone the repository and install dependencies:
